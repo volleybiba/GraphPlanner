@@ -24,3 +24,11 @@ python evaluate_graph_planner.py \
     --k_neighbors 10 --max_subgoals 8 --subsample_stride 5
 ```
 
+
+## Если JAX выдает ошибку и принудительно запускает программу на CPU
+```bash
+SITE=/home/maxim/switching-successor-measures/ssm/lib/python3.12/site-packages
+
+export LD_LIBRARY_PATH="$SITE/nvidia/cusparse/lib:$SITE/nvidia/cublas/lib:$SITE/nvidia/cudnn/lib:$SITE/nvidia/cufft/lib:$SITE/nvidia/cusolver/lib:$SITE/nvidia/nccl/lib:$SITE/nvidia/nvjitlink/lib:$LD_LIBRARY_PATH"
+```
+
